@@ -37,6 +37,8 @@ void main(List<String> args) {
     ..initWeight(250)
     ..setupOS('Android');
   final myPhone = builder.buildPhone();
+  final myPhone2 = Phone(builder);
 
   print(myPhone.os);
+  print(myPhone2.os);
 }

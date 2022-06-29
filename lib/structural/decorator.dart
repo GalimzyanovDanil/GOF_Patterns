@@ -19,7 +19,7 @@ class BaseMagazine implements IMagazine {
   int getPageCount() {
     return count;
   }
-}       
+}
 
 abstract class IMagazineDecorator implements IMagazine {
   final IMagazine magazine;
@@ -69,6 +69,7 @@ void main(List<String> args) {
   // Создание разных объектов из одного базового
   final baseMagazine = BaseMagazine(50);
   final m1 = FlowersPart(baseMagazine);
+  final mm = FlowersPart(m1);
   final m2 = CarPart(baseMagazine);
   print(m1.getPageCount());
   print(m2.getPageCount());
